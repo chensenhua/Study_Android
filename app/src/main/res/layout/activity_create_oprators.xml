@@ -6,7 +6,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".rxjava.RxJavaStudyActivity">
+        tools:context=".rxjava.CreateOpratorsActivity">
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="match_parent"
                   android:orientation="vertical">
@@ -14,87 +14,86 @@
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="hello rxjava"
-                android:onClick="helloRxjava"
+                android:text="create operator"
+                android:onClick="createOperator"
+
+        />
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="defer operator"
+                android:onClick="deferOperator"
+
+        />
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="empty operator"
+                android:onClick="emptyOperator"
 
         />
 
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="create Observables"
-                android:onClick="createObservables"
-
-        />
-
-
-
-
-        <android.support.v7.widget.AppCompatButton
-
-                style="@style/itemStyle"
-                android:text="create Flowable"
-                android:onClick="createFlowable"
+                android:text="never operator"
+                android:onClick="neverOperator"
 
         />
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="create Single"
-                android:onClick="createSingle"
+                android:text="error operator"
+                android:onClick="errorOperator"
 
-        />
-        <android.support.v7.widget.AppCompatButton
-                style="@style/itemStyle"
-                android:text="create Single"
-                android:onClick="createSingle"
         />
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="create AsyncSubject"
-                android:onClick="createAsyncSubject"
+                android:text="from operator"
+                android:onClick="fromOperator"
+
         />
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="create BehaviorSubject"
-                android:onClick="createBehaviorSubject"
-        />
+                android:text="interval operator"
+                android:onClick="intervalOperator"
 
+        />
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="create PublishSubject"
-                android:onClick="createPublishSubject"
+                android:text="just operator"
+                android:onClick="justOperator"
+
         />
 
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="create ReplaySubject"
-                android:onClick="createReplaySubject"
-        />
+                android:text="range operator"
+                android:onClick="rangeOperator"
 
-        <android.support.v7.widget.AppCompatButton
-                style="@style/itemStyle"
-                android:text="scheduler test"
-                android:onClick="scheduler"
         />
 
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="Async Operators"
-                android:onClick="asyncOperators"
-        />
+                android:text="repeat operator"
+                android:onClick="repeatOperator"
 
+        />
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="Create Operators"
-                android:onClick="createOperators"
-           />
+                android:text="timer operator"
+                android:onClick="timerOperator"
+
+        />
+
+
+
 
 
 

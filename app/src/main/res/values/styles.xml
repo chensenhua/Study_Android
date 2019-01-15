@@ -8,4 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="itemStyle"  >
+        <!-- Customize your theme here. -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_height</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+
+
 </resources>

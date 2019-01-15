@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".rxjava.RxJavaStudyActivity">
+        </activity>
+        <activity android:name=".rxjava.AsyncOperatorsActivity">
+        </activity>
+        <activity android:name=".rxjava.CreateOpratorsActivity">
+        </activity>
     </application>
 
 </manifest>
