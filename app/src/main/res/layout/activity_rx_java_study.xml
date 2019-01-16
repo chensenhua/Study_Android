@@ -52,6 +52,12 @@
 
 
 
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="error handler  "
+                android:onClick="errorHandler"
+        />
+
 
 
 

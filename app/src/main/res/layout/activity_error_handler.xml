@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".rxjava.ErrorHandlerActivity">
+
+    <LinearLayout android:layout_width="match_parent"
+     android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="doOnError"
+                android:onClick="doOnError"/>
+
+
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="onErrorComplete"
+                android:onClick="onErrorComplete"/>
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="onErrorResumeNext"
+                android:onClick="onErrorResumeNext"/>
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="onErrorReturn"
+                android:onClick="onErrorReturn"/>
+
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="onErrorReturnItem"
+                android:onClick="onErrorReturnItem"/>
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="retry"
+                android:onClick="retry"/>
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="retryUntil"
+                android:onClick="retryUntil"/>
+
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="retryWhen"
+                android:onClick="retryWhen"/>
+    </LinearLayout>
+
+</ScrollView>
