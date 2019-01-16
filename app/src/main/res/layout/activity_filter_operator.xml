@@ -1,116 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".rxjava.RxJavaStudyActivity">
+        tools:context=".FilterOperatorActivity">
+
     <LinearLayout android:layout_width="match_parent"
                   android:layout_height="match_parent"
                   android:orientation="vertical">
 
-
         <android.support.v7.widget.AppCompatButton
-                style="@style/itemStyle"
-                android:text="hello rxjava"
-                android:onClick="helloRxjava"
-
+        style="@style/itemStyle"
+        android:text="debounce"
+        android:onClick="debounce"
         />
 
-
-
-
-
         <android.support.v7.widget.AppCompatButton
-                style="@style/itemStyle"
-                android:text="Create Operators"
-                android:onClick="createOperators"
-           />
-
-
-        <android.support.v7.widget.AppCompatButton
-                style="@style/itemStyle"
-                android:text="transform Operators"
-                android:onClick="transformOperators"
+        style="@style/itemStyle"
+        android:text="distinct"
+        android:onClick="distinct"
         />
 
 
         <android.support.v7.widget.AppCompatButton
-                style="@style/itemStyle"
-                android:text="filter Operators"
-                android:onClick="filterOperators"
+        style="@style/itemStyle"
+        android:text="distinctUntilChange"
+        android:onClick="distinctUntilChange"
         />
 
-
-
-
-
-
-
-
-
-
-
-
-
         <android.support.v7.widget.AppCompatButton
-                style="@style/itemStyle"
-                android:text="create Observables"
-                android:onClick="createObservables"
-
-        />
-
-
-
-
-        <android.support.v7.widget.AppCompatButton
-
-                style="@style/itemStyle"
-                android:text="create Flowable"
-                android:onClick="createFlowable"
-
+        style="@style/itemStyle"
+        android:text="elementAt"
+        android:onClick="elementAt"
         />
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="create Single"
-                android:onClick="createSingle"
-
+                android:text="filter"
+                android:onClick="filter"
         />
 
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="create AsyncSubject"
-                android:onClick="createAsyncSubject"
+                android:text="first"
+                android:onClick="first"
         />
 
-        <android.support.v7.widget.AppCompatButton
-                style="@style/itemStyle"
-                android:text="create BehaviorSubject"
-                android:onClick="createBehaviorSubject"
-        />
 
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="create PublishSubject"
-                android:onClick="createPublishSubject"
+                android:text="firstElement"
+                android:onClick="firstElement"
+        />
+
+
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="ignoreElement"
+                android:onClick="ignoreElement"
         />
 
 
         <android.support.v7.widget.AppCompatButton
                 style="@style/itemStyle"
-                android:text="create ReplaySubject"
-                android:onClick="createReplaySubject"
+                android:text="last"
+                android:onClick="last"
         />
 
 
 
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="ofType"
+                android:onClick="ofType"
+        />
 
 
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="simple"
+                android:onClick="simple"
+        />
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="skip"
+                android:onClick="skip"
+        />
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="take"
+                android:onClick="take"
+        />
+
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="timeout"
+                android:onClick="timeout"
+        />
     </LinearLayout>
 
 </ScrollView>
