@@ -253,4 +253,8 @@ public class RxJavaStudyActivity extends AppCompatActivity {
     public void createOperators(View view) {
         startActivity(new Intent(this,CreateOpratorsActivity.class));
     }
+
+    public void transformOperators(View view) {
+        startActivity(new Intent(this,TransformOperatorActivity.class));
+    }
 }

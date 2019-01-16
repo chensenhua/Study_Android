@@ -22,6 +22,8 @@
         </activity>
         <activity android:name=".rxjava.CreateOpratorsActivity">
         </activity>
+        <activity android:name=".rxjava.TransformOperatorActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -97,6 +97,13 @@
            />
 
 
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="transform Operators"
+                android:onClick="transformOperators"
+        />
+
+
 
     </LinearLayout>
 
