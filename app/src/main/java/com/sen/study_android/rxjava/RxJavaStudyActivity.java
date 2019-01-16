@@ -264,4 +264,8 @@ public class RxJavaStudyActivity extends AppCompatActivity {
 
         startActivity(new Intent(this, FilterOperatorActivity.class));
     }
+
+    public void combiningOperators(View view) {
+
+    }
 }

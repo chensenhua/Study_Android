@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".rxjava.CombiningActivity">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+
+
+        <android.support.v7.widget.AppCompatButton
+         style="@style/itemStyle"
+         android:text="startWith"
+         android:onClick="startWith"
+        />
+
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="merge"
+                android:onClick="merge"
+        />
+
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="zip"
+                android:onClick="zip"
+        />
+
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="combinLatest"
+                android:onClick="combinLatest"
+        />
+
+
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="switch"
+                android:onClick="switchOpertor"
+        />
+
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="join"
+                android:onClick="join"
+        />
+
+
+    </LinearLayout>
+
+</ScrollView>

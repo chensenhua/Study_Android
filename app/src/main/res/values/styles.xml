@@ -18,6 +18,7 @@
         <item name="android:layout_marginEnd">16dp</item>
         <item name="android:layout_marginTop">6dp</item>
         <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:textAllCaps">false</item>
 
         <item name="android:textColor">@drawable/bg_item_text</item>
     </style>

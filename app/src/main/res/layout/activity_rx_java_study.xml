@@ -43,6 +43,81 @@
                 android:onClick="filterOperators"
         />
 
+        <android.support.v7.widget.AppCompatButton
+                style="@style/itemStyle"
+                android:text="combining Operators"
+                android:onClick="combiningOperators"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
