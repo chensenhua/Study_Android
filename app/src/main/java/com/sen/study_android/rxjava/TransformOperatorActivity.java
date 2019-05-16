@@ -83,6 +83,7 @@ public class TransformOperatorActivity extends AppCompatActivity {
         }).subscribe(s -> Log.i(tag, s));
 
 
+
     }
 
     /**

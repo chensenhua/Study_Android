@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api gradleApi()//gradle sdk
+    api localGroovy()//groovy sdk
+}
+
+
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
+

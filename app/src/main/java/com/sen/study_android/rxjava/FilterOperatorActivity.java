@@ -1,9 +1,10 @@
-package com.sen.study_android;
+package com.sen.study_android.rxjava;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import com.sen.study_android.R;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;

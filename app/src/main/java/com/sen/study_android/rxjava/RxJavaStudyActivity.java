@@ -5,13 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import com.sen.study_android.FilterOperatorActivity;
 import com.sen.study_android.R;
 import io.reactivex.*;
-import io.reactivex.functions.Consumer;
-import io.reactivex.internal.schedulers.NewThreadScheduler;
-import io.reactivex.internal.schedulers.SchedulerPoolFactory;
-import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.AsyncSubject;
 import io.reactivex.subjects.BehaviorSubject;
 import io.reactivex.subjects.PublishSubject;
@@ -19,8 +14,6 @@ import io.reactivex.subjects.ReplaySubject;
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.Callable;
 
 public class RxJavaStudyActivity extends AppCompatActivity {

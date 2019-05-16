@@ -2,21 +2,46 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.sen.study_android">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+            android:name=".MainApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".okHttp.okHttpActivity">
+        </activity>
+        <activity android:name=".window.WindowTestActivity">
+        </activity>
+        <activity android:name=".asnytask.AsyncTaskTestActivity">
+        </activity>
+        <activity android:name=".yishutansuo.chapter1.LiftCircleActivity"/>
+        <activity
+                android:name=".yishutansuo.chapter1.SecondActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".yishutansuo.ThreadHandlerActivity">
+        </activity>
+        <activity android:name=".yishutansuo.ThreadLocalActivity">
+        </activity>
+
+        <meta-data
+                android:name="com.google.android.actions"
+                android:resource="@xml/widget_info"/>
+
+        <activity android:name=".yishutansuo.RemoteViewStudy">
+        </activity>
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN"/> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER"/> -->
-            <!-- </intent-filter> -->
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".rxjava.RxJavaStudyActivity">
         </activity>
@@ -26,7 +51,7 @@
         </activity>
         <activity android:name=".rxjava.TransformOperatorActivity">
         </activity>
-        <activity android:name=".FilterOperatorActivity">
+        <activity android:name=".rxjava.FilterOperatorActivity">
 
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN"/> -->
@@ -36,11 +61,14 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".rxjava.CombiningActivity">
-           <!-- <intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <activity android:name=".rxjava.ErrorHandlerActivity">
             <intent-filter>
@@ -49,6 +77,16 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <receiver android:name=".yishutansuo.MyAppWidgetPrivider">
+            <meta-data
+                    android:name="android.appwidget.provider"
+                    android:resource="@xml/widget_info"/>
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

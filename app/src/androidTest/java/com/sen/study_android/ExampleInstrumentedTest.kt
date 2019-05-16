@@ -2,6 +2,7 @@ package com.sen.study_android
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
+import android.util.Log
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -19,6 +20,8 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
+        System.out.println("------------->test")
+       Log.e("sen","------------->test")
         assertEquals("com.sen.study_android", appContext.packageName)
     }
 }

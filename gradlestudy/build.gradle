@@ -1,0 +1,107 @@
+apply plugin:'java'
+
+task hello2(dependsOn: 'hello') << {
+    println "hello Gradle 2"
+}
+
+task hello3(dependsOn: 'hello') << {
+    println "hello Gradle 3"
+}
+
+hello3.dependsOn hello2
+
+
+task hello {
+    doLast {
+        println("hello Gradle")
+    }
+}
+
+4.times {
+    index ->
+        task "task$index" << {
+
+            println("create task $index")
+        }
+
+}
+
+task(myTask){
+    println("hello myTask")
+}
+
+
+
+task greeting << {
+    println "greeting to $hello.name task"
+//    getTasks().all {
+//        println "all task to $it"
+//    }
+}
+
+greeting.doLast{
+    println "greeting to $hello.name task2"
+}
+
+greeting.doLast{
+    println "greeting to $hello.name task3"
+}
+
+
+greeting.doFirst{
+    println "greeting first to $hello.name task1"
+}
+
+greeting.doFirst{
+    println "greeting first to $hello.name task2"
+}
+
+
+
+task testAnt << {
+    ant {
+        echo message: "hello ant"
+    }
+}
+
+gradle.taskGraph.whenReady { task ->
+    println "whenReady   $task  "
+}
+
+
+testAnt.mustRunAfter(greeting)
+
+gradle.taskGraph.beforeTask {
+    task ->
+        testAnt.doLast {"$task to hello task4"}
+        println "beforeTask   $task  "
+
+}
+gradle.taskGraph.afterTask {
+    task ->
+        println "afterTask   $task  "
+
+}
+
+
+task testDesc<<{
+    project.setDescription("testDesc")
+    println project.description
+    println project.version
+    println testDesc.getActions()
+      configurations.each {
+         // println "config-->$it"
+      }
+
+    project.properties.each {
+       // println "property-->$it"
+    }
+
+    println project.projectDir
+
+
+}
+
+
+
+

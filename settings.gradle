@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':Annotlib', ':AnnotComplielib', ':myapplication', ':ipcapplication', ':remoteviews', ':groovylibrary', ':buildSrc', ':ai_face'
