@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import com.sen.study_android.R;
 import io.reactivex.*;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 import io.reactivex.subjects.AsyncSubject;
 import io.reactivex.subjects.BehaviorSubject;
 import io.reactivex.subjects.PublishSubject;
@@ -78,6 +80,8 @@ public class RxJavaStudyActivity extends AppCompatActivity {
 
         Flowable<String> two = Flowable.just("1", "2", "3");
         two.subscribe(s -> Log.i(tag, "createFlowable two-->" + s));
+        two.subscribeOn(Schedulers.newThread());
+        two.observeOn(AndroidSchedulers.mainThread());
 
 
         Flowable<String> three = Flowable.fromPublisher(new Publisher<String>() {

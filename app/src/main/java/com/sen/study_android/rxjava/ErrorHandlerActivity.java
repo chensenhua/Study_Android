@@ -1,5 +1,6 @@
 package com.sen.study_android.rxjava;
 
+import android.graphics.BitmapRegionDecoder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -94,6 +95,7 @@ public class ErrorHandlerActivity extends AppCompatActivity {
             @Override
             public void onError(Throwable e) {
                 Slog.i(tag, "onErrorComplete onError-->" + e.getMessage());
+                System.out.println();
 
             }
         });

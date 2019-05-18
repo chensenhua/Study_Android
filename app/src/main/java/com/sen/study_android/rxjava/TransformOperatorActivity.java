@@ -82,7 +82,55 @@ public class TransformOperatorActivity extends AppCompatActivity {
             }
         }).subscribe(s -> Log.i(tag, s));
 
+        Observable.create(new ObservableOnSubscribe<Integer>() {
+            @Override
+            public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
+                Log.i(tag, "flatMap 3 1 ObservableSource ");
+                emitter.onNext(1);
+                Log.i(tag, "flatMap 3 2 ObservableSource ");
+                emitter.onNext(2);
+                Log.i(tag, "flatMap 3 3 ObservableSource ");
 
+            }
+        }).create(new ObservableOnSubscribe<Integer>() {
+                      @Override
+                      public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
+                          Log.i(tag, "flatMap 4 1 ObservableSource ");
+                          emitter.onNext(3);
+                          Log.i(tag, "flatMap 4 2 ObservableSource ");
+                          emitter.onNext(4);
+                          Log.i(tag, "flatMap 4 3 ObservableSource ");
+                      }
+                  }
+        )
+
+                .flatMap(new Function<Integer, ObservableSource<String>>() {
+                    @Override
+                    public ObservableSource<String> apply(Integer integer) throws Exception {
+
+                        return Observable.just("flatMap 3 just-->" + integer, "flatMap 3 just-->" + (integer + 10));
+                    }
+                }).subscribe(new Observer<String>() {
+            @Override
+            public void onSubscribe(Disposable d) {
+                d.dispose();
+            }
+
+            @Override
+            public void onNext(String s) {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
 
     }
 
@@ -100,12 +148,14 @@ public class TransformOperatorActivity extends AppCompatActivity {
                 Log.i(tag, "flatMapCompleable 1 CompletableSource-->" + integer);
                 return Completable.complete();
             }
-        }).subscribe(new Action() {
-            @Override
-            public void run() throws Exception {
-                Log.i(tag, "flatMapCompleable Action");
-            }
-        });
+        })
+
+                .subscribe(new Action() {
+                    @Override
+                    public void run() throws Exception {
+                        Log.i(tag, "flatMapCompleable Action");
+                    }
+                });
 
 
         Observable.just(1, 2, 3).flatMapCompletable(new Function<Integer, CompletableSource>() {
@@ -245,6 +295,7 @@ public class TransformOperatorActivity extends AppCompatActivity {
 
     /**
      * 将原始Observable发射的数据进行分组
+     *
      * @param view
      */
     public void groupBy(View view) {
@@ -264,7 +315,7 @@ public class TransformOperatorActivity extends AppCompatActivity {
             public void onNext(GroupedObservable<String, Integer> stringIntegerGroupedObservable) {
 
 
-             Log.i(tag,"key="+stringIntegerGroupedObservable.getKey()+"\tvalue="+stringIntegerGroupedObservable.toList());
+                Log.i(tag, "key=" + stringIntegerGroupedObservable.getKey() + "\tvalue=" + stringIntegerGroupedObservable.toList());
 
             }
 
@@ -283,38 +334,41 @@ public class TransformOperatorActivity extends AppCompatActivity {
 
     /**
      * 将数据转换
+     *
      * @param view
      */
     public void map(View view) {
-        Observable.just(1,2,3)
+        Observable.just(1, 2, 3)
                 .map(new Function<Integer, Integer>() {
                     @Override
                     public Integer apply(Integer integer) throws Exception {
-                            return integer*integer;
+                        return integer * integer;
                     }
-                }).subscribe(r->Log.i(tag,"map--->"+r));
+                }).subscribe(r -> Log.i(tag, "map--->" + r));
     }
 
     /**
      * 对发射的数据进行扫描，将当前的结果和上一次的结果合并转换为新的数据
+     *
      * @param view
      */
     public void sacn(View view) {
-        Observable.just(1,2,3,4)
+        Observable.just(1, 2, 3, 4)
                 .scan(1, new BiFunction<Integer, Integer, Integer>() {
                     @Override
                     public Integer apply(Integer integer, Integer integer2) throws Exception {
-                        return integer+integer2;
+                        return integer + integer2;
                     }
-                }).subscribe(r->Log.i(tag,"sacn--->"+r));
+                }).subscribe(r -> Log.i(tag, "sacn--->" + r));
     }
 
     /**
      * 将原始Observabl发射的数据转换为数据组再发送
+     *
      * @param view
      */
     public void window(View view) {
-        Observable.range(2,12)
+        Observable.range(2, 12)
                 .window(3)
 
                 .subscribe(new Consumer<Observable<Integer>>() {
@@ -324,7 +378,7 @@ public class TransformOperatorActivity extends AppCompatActivity {
                         integerObservable.subscribe(new Consumer<Integer>() {
                             @Override
                             public void accept(Integer integer) throws Exception {
-                                Log.i(tag,"window--->"+integer+"\t"+integerObservable.toString());
+                                Log.i(tag, "window--->" + integer + "\t" + integerObservable.toString());
                             }
                         });
                     }
