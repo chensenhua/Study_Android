@@ -1,1 +1,1 @@
-include ':app', ':Annotlib', ':AnnotComplielib', ':myapplication', ':ipcapplication', ':remoteviews', ':groovylibrary', ':buildSrc', ':ai_face'
+include ':app', ':Annotlib', ':AnnotComplielib', ':myapplication', ':ipcapplication', ':remoteviews', ':groovylibrary', ':buildSrc', ':daggerapplication', ':daggerandroidapplication'

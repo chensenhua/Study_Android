@@ -3,7 +3,10 @@ package com.sen.study_android.designmode;
 import android.renderscript.Int3;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 
 /**
  *
@@ -15,6 +18,7 @@ import java.util.HashSet;
 
 class InstanceDemo1 {
     static  InstanceDemo1 mInstance=new InstanceDemo1();
+
 
     public static InstanceDemo1 getInstance() {
         return mInstance;
@@ -29,6 +33,9 @@ class InstanceDemo1 {
  */
 class InstaceDemo2{
     static  InstaceDemo2 mInstance;
+    List list=new ArrayList();
+
+
 
     public static InstaceDemo2 getInstance() {
         if(mInstance==null){
