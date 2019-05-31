@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.sen.study_android.asnytask.AsyncTaskTestActivity
+import com.sen.study_android.mvvm.MvvmTestActivity
 import com.sen.study_android.okHttp.okHttpActivity
 import com.sen.study_android.rxjava.RxJavaStudyActivity
 import com.sen.study_android.utils.Foo
@@ -52,6 +53,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,  okHttpActivity::class.java))
         }
 
-        Thread.dumpStack();
+
+        to_mvvm_study.setOnClickListener {
+            startActivity(Intent(this,  MvvmTestActivity::class.java))
+        }
+
+
     }
 }

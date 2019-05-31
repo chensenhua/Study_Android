@@ -70,4 +70,13 @@
 
     />
 
+
+    <Button
+            android:id="@+id/to_mvvm_study"
+            style="@style/itemStyle"
+            android:text="MVVM学习"
+
+
+    />
+
 </LinearLayout>
