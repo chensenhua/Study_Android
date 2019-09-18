@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Study_Android</string>
+    <string name="rxjava_study">RxJava Study</string>
+    <string name="remoteviews_study">RemoteViews Study</string>
+    <string name="threadlocal_study">ThreadLocal Study</string>
+    <string name="threadhandler_study">ThreadHandler Study</string>
+    <string name="activity_study">Activity生命周期Study</string>
+    <string name="asynctask">AsyncTask学习</string>
+    <string name="windowmanager">WindowManager学习</string>
+    <string name="okhttp">OkHttp学习</string>
+    <string name="mvvm">MVVM学习</string>
 </resources>

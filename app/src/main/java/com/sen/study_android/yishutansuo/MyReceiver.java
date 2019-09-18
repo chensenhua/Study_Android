@@ -10,5 +10,6 @@ public class MyReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
             Log.e("sen","MyReceiver-->"+intent.getAction());
+
         }
     }

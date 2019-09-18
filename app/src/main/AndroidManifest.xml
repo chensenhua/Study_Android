@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.sen.study_android">
 
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -13,6 +14,12 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".kotlin.CoroutinesTestActivity">
+        </activity>
+        <activity android:name=".kotlin.KotlinTestActivity">
+        </activity>
+        <activity android:name=".animators.AnimatorsActivity">
+        </activity>
         <activity android:name=".mvvm.MvvmTestActivity">
         </activity>
         <activity android:name=".okHttp.okHttpActivity">
@@ -54,14 +61,10 @@
         <activity android:name=".rxjava.TransformOperatorActivity">
         </activity>
         <activity android:name=".rxjava.FilterOperatorActivity">
-
-
         </activity>
         <activity android:name=".rxjava.CombiningActivity">
-
         </activity>
         <activity android:name=".rxjava.ErrorHandlerActivity">
-
         </activity>
 
         <receiver android:name=".yishutansuo.MyAppWidgetPrivider">

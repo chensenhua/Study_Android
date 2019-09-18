@@ -12,6 +12,6 @@ public class Slog   {
 
 
     public static void e(String tag,String msg){
-        Log.i(tag,msg);
+        Log.e(tag,msg);
     }
 }

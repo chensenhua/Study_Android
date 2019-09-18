@@ -23,7 +23,7 @@ public class AsyncTaskTestActivity extends AppCompatActivity {
     private void startAsyncTask(){
         AsyncTaskTest asyncTaskTest=  new AsyncTaskTest();
         asyncTaskTest.execute(1,2,3);
-
+        android.os.Process.setThreadPriority(android.os.Process.THREAD_PRIORITY_BACKGROUND);
 
     }
 

@@ -6,6 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:fitsSystemWindows="false"
         tools:context=".MainActivity">
 
     <Button
@@ -78,5 +79,23 @@
 
 
     />
+
+
+    <Button
+            android:id="@+id/to_animator_study"
+            style="@style/itemStyle"
+            android:text="动画学习"
+            android:transitionName="share_name"
+
+    />
+
+
+    <Button
+            android:id="@+id/to_kotlin_study"
+            style="@style/itemStyle"
+            android:text="Kotlin学习"
+
+    />
+
 
 </LinearLayout>
