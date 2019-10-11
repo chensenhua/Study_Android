@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.sen.study_android">
+        package="com.sen.study_android">
 
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 
     <application
             android:name=".MainApplication"
@@ -14,66 +17,49 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".kotlin.CoroutinesTestActivity">
-        </activity>
-        <activity android:name=".kotlin.KotlinTestActivity">
-        </activity>
-        <activity android:name=".animators.AnimatorsActivity">
-        </activity>
-        <activity android:name=".mvvm.MvvmTestActivity">
-        </activity>
-        <activity android:name=".okHttp.okHttpActivity">
-        </activity>
-        <activity android:name=".window.WindowTestActivity">
-        </activity>
-        <activity android:name=".asnytask.AsyncTaskTestActivity">
-        </activity>
-        <activity android:name=".yishutansuo.chapter1.LiftCircleActivity"/>
+        <activity android:name=".bitmap.BitmapTestActivity"></activity>
+        <activity android:name=".kotlin.CoroutinesTestActivity"></activity>
+        <activity android:name=".kotlin.KotlinTestActivity"></activity>
+        <activity android:name=".animators.AnimatorsActivity"></activity>
+        <activity android:name=".mvvm.MvvmTestActivity"></activity>
+        <activity android:name=".okHttp.okHttpActivity"></activity>
+        <activity android:name=".window.WindowTestActivity"></activity>
+        <activity android:name=".asnytask.AsyncTaskTestActivity"></activity>
+        <activity android:name=".yishutansuo.chapter1.LiftCircleActivity" />
         <activity
                 android:name=".yishutansuo.chapter1.SecondActivity"
                 android:configChanges="keyboardHidden|orientation|screenSize"
-                android:launchMode="singleTask">
-        </activity>
-        <activity android:name=".yishutansuo.ThreadHandlerActivity">
-        </activity>
-        <activity android:name=".yishutansuo.ThreadLocalActivity">
-        </activity>
+                android:launchMode="singleTask"></activity>
+        <activity android:name=".yishutansuo.ThreadHandlerActivity"></activity>
+        <activity android:name=".yishutansuo.ThreadLocalActivity"></activity>
 
         <meta-data
                 android:name="com.google.android.actions"
-                android:resource="@xml/widget_info"/>
+                android:resource="@xml/widget_info" />
 
-        <activity android:name=".yishutansuo.RemoteViewStudy">
-        </activity>
+        <activity android:name=".yishutansuo.RemoteViewStudy"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".rxjava.RxJavaStudyActivity">
-        </activity>
-        <activity android:name=".rxjava.AsyncOperatorsActivity">
-        </activity>
-        <activity android:name=".rxjava.CreateOpratorsActivity">
-        </activity>
-        <activity android:name=".rxjava.TransformOperatorActivity">
-        </activity>
-        <activity android:name=".rxjava.FilterOperatorActivity">
-        </activity>
-        <activity android:name=".rxjava.CombiningActivity">
-        </activity>
-        <activity android:name=".rxjava.ErrorHandlerActivity">
-        </activity>
+        <activity android:name=".rxjava.RxJavaStudyActivity"></activity>
+        <activity android:name=".rxjava.AsyncOperatorsActivity"></activity>
+        <activity android:name=".rxjava.CreateOpratorsActivity"></activity>
+        <activity android:name=".rxjava.TransformOperatorActivity"></activity>
+        <activity android:name=".rxjava.FilterOperatorActivity"></activity>
+        <activity android:name=".rxjava.CombiningActivity"></activity>
+        <activity android:name=".rxjava.ErrorHandlerActivity"></activity>
 
         <receiver android:name=".yishutansuo.MyAppWidgetPrivider">
             <meta-data
                     android:name="android.appwidget.provider"
-                    android:resource="@xml/widget_info"/>
+                    android:resource="@xml/widget_info" />
 
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
         </receiver>
     </application>

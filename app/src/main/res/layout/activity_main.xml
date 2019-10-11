@@ -16,6 +16,12 @@
 
     />
 
+    <Button
+            android:id="@+id/btn_to_bitmap"
+            style="@style/itemStyle"
+            android:text="Bitmap Study"
+    />
+
 
     <Button
             android:id="@+id/btn_to_remoteviews"

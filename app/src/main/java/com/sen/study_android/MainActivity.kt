@@ -16,6 +16,7 @@ import android.view.Window
 import com.google.gson.annotations.Expose
 import com.sen.study_android.animators.AnimatorsActivity
 import com.sen.study_android.asnytask.AsyncTaskTestActivity
+import com.sen.study_android.bitmap.BitmapTestActivity
 import com.sen.study_android.kotlin.KotlinTestActivity
 import com.sen.study_android.mvvm.MvvmTestActivity
 import com.sen.study_android.okHttp.okHttpActivity
@@ -120,6 +121,10 @@ class MainActivity : AppCompatActivity() {
 
         to_kotlin_study.setOnClickListener {
             startActivity(Intent(this,KotlinTestActivity::class.java))
+        }
+
+        btn_to_bitmap.setOnClickListener {
+            startActivity(Intent(this,BitmapTestActivity::class.java));
         }
 
 
